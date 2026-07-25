@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Pulse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 Page Pulse</h1>
+
+    <p class="subtitle">
+    Instant SEO & Accessibility Analyzer
+    </p>
+
+    <p class="description">
+    Analyze any webpage in seconds and get metadata,
+    performance and accessibility insights.
+    </p>
+
+    <div class="search-box">
+        <div class="placeholder">
+            Enter a website URL and click Analyze to generate a report.
+        </div>
+        <input
+            id="urlInput"
+            type="text"
+            placeholder="https://example.com">
+
+        <button onclick="analyzePage()">
+            Analyze
+        </button>
+    </div>
+
+    <div id="loading" class="hidden">
+    <div class="spinner"></div>
+    <h3>Analyzing Website...</h3>
+    <p>Please wait while we inspect the page.</p>
+    </div>
+    <div style="text-align:center; margin-bottom:20px;">
+        <button
+            id="downloadBtn"
+            class="hidden"
+            onclick="downloadReport()">
+            📥 Download Report
+        </button>
+    </div>
+    <div id="results"></div>
+
+</div>
+<script src="script.js"></script>
+
+
+</body>
+</html>
