@@ -1,58 +1,62 @@
 # 🚀 Page Pulse
 
-Page Pulse is a lightweight website audit tool built using FastAPI, HTML, CSS, and JavaScript.
-
-It analyzes any webpage and provides useful SEO and accessibility insights within seconds.
+A lightweight full-stack website auditing tool that analyzes SEO and accessibility metrics using FastAPI and a responsive JavaScript dashboard.
 
 ---
 
-## Features
+## ✨ Features
 
-- Website status code
-- Response time
-- Page title
-- Meta description
-- H1 tag count
-- Images missing ALT attributes
-- Word count
-- Estimated reading time
-- SEO Score
-- Download audit report as JSON
-- Responsive UI
-- Loading indicator
-- Error handling
+- 🚀 Analyze any webpage in seconds
+- 📄 Extract page title and meta description
+- 🏷️ Count H1 headings
+- 🖼️ Detect images missing ALT attributes
+- ⚡ Measure response time
+- 📚 Calculate word count and estimated reading time
+- 📊 Generate an SEO score
+- 📥 Download audit reports as JSON
+- 📱 Responsive dashboard
+- ❌ Graceful error handling
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
-Backend
-- FastAPI
-- BeautifulSoup
-- HTTPX
-- Pydantic
-
-Frontend
-- HTML
-- CSS
-- JavaScript
+| Layer | Technologies |
+|-------|--------------|
+| Backend | FastAPI, HTTPX, BeautifulSoup, Pydantic |
+| Frontend | HTML5, CSS3, JavaScript |
+| API Docs | Swagger UI |
 
 ---
 
 ## Project Structure
 
-backend/
-- main.py
-- parser.py
-- models.py
-- utils.py
-
-frontend/
-- index.html
-- style.css
-- script.js
-
+DigitalHeroes-PagePulse/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── parser.py
+│   │   ├── models.py
+│   │   └── utils.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── README.md
+└── AI_USAGE.md
 ---
+
+## Prerequisites
+
+- Python 3.10+
+- Git
+- VS Code (recommended)
+- Live Server extension
+
 
 ## Installation
 
@@ -106,30 +110,54 @@ using Live Server.
 
 GET
 
-```
-/audit?url=https://example.com
+### Endpoint
+
+```http
+GET /audit
 ```
 
+### Query Parameter
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| url | string | Website URL to analyze |
+
+Example
+
+```
+GET /audit?url=https://example.com
+```
 Returns
 
 ```json
 {
+  "url": "https://example.com",
   "status_code": 200,
-  "title": "...",
-  "meta_description": "...",
+  "response_time_ms": 312.4,
+  "title": "Example Domain",
+  "meta_description": "Not Found",
   "h1_count": 1,
   "images_missing_alt": 0,
-  "word_count": 400,
-  "reading_time_minutes": 2
+  "word_count": 21,
+  "reading_time_minutes": 0.1
 }
 ```
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
-- Lighthouse integration
-- SEO suggestions
 - PDF report export
-- Multi-page crawling
-- Performance graphs
+- Multi-page website crawling
+- SEO recommendations
+- Accessibility score
+- Performance charts
+- Dark mode
+
+## AI Assistance
+
+AI was used to assist with brainstorming, debugging, UI refinement, and documentation. The application architecture, implementation, testing, and final integration were completed manually.
+
+## Author
+
+**Aditi Tripathi** 
