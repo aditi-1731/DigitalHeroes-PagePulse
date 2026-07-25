@@ -145,6 +145,33 @@ Returns
 
 ---
 
+## Design Decisions
+
+### 1. FastAPI as the Backend Framework
+I selected FastAPI because it provides automatic API documentation, asynchronous request handling, and clean data validation through Pydantic. It allowed me to build a lightweight and scalable REST API quickly.
+
+### 2. BeautifulSoup for HTML Parsing
+BeautifulSoup was chosen because it is lightweight, reliable, and sufficient for extracting SEO-related metadata such as page titles, meta descriptions, headings, image attributes, and textual content without requiring browser automation.
+
+### 3. Vanilla HTML, CSS, and JavaScript
+Instead of using a frontend framework, I used plain HTML, CSS, and JavaScript to keep the application lightweight, minimize dependencies, and focus on API integration and user experience.
+
+## Testing
+
+Unit tests were written using pytest to verify the HTML parsing logic.
+
+The following scenarios are covered:
+
+- Valid HTML page (happy path)
+- HTML page without a title
+- Empty HTML document
+
+Run the tests using:
+
+```bash
+pytest
+```
+
 ## 🚀 Future Improvements
 
 - PDF report export
