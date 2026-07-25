@@ -13,18 +13,20 @@
     <h1>🚀 Page Pulse</h1>
 
     <p class="subtitle">
-    Instant SEO & Accessibility Analyzer
+        Instant SEO & Accessibility Analyzer
     </p>
 
     <p class="description">
-    Analyze any webpage in seconds and get metadata,
-    performance and accessibility insights.
+        Analyze any webpage in seconds and get metadata,
+        performance and accessibility insights.
     </p>
 
     <div class="search-box">
+
         <div class="placeholder">
             Enter a website URL and click Analyze to generate a report.
         </div>
+
         <input
             id="urlInput"
             type="text"
@@ -33,13 +35,15 @@
         <button onclick="analyzePage()">
             Analyze
         </button>
+
     </div>
 
     <div id="loading" class="hidden">
-    <div class="spinner"></div>
-    <h3>Analyzing Website...</h3>
-    <p>Please wait while we inspect the page.</p>
+        <div class="spinner"></div>
+        <h3>Analyzing Website...</h3>
+        <p>Please wait while we inspect the page.</p>
     </div>
+
     <div style="text-align:center; margin-bottom:20px;">
         <button
             id="downloadBtn"
@@ -48,11 +52,24 @@
             📥 Download Report
         </button>
     </div>
+
     <div id="results"></div>
 
 </div>
-<script src="script.js"></script>
 
+<footer>
+    <p>
+        Built with ❤️ using FastAPI, HTML, CSS & JavaScript
+    </p>
+
+    <p>
+        <a href="https://digitalheroesco.com" target="_blank">
+            Built for Digital Heroes Training Task
+        </a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
